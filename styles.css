@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    background: blueviolet;
+}
+.container{
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    background: white;
+    min-height: 100px;
+    border-radius: 10px;
+}
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+#newtask input{
+    width: 450px;
+    height: 45px;
+    font-family: sans-serif;
+    font-size: 15px;
+    border: 2px solid olive;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+}
+#newtask input:focus{
+    outline: none;
+    border-color: blue;
+}
+#newtask button{
+    position: relative;
+    float: right;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    outline: none;
+}
+#tasks{
+    background-color: white;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 30px 20px;
+   margin-top: 10px;
+   border-radius: 10px;
+   width: 100%;
+   position: relative;
+}
+.task{
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding:5px 10px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+}
+.task span{
+font-family: sans-serif;
+font-size: 15px;
+font-weight: 400;
+}
+.delete{
+background-color: blue;
+color: white;
+height: 100%;
+width: 40px;
+height: 100%;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+outline: none;
+margin-right: 25px;
+}
+.edit{
+
+    background-color: blue;
+color: white;
+height: 100%;
+width: 40px;
+height: 100%;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+outline: none;
+margin-right: 30px;
+}

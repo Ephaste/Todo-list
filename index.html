@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Task to be done.......">
+            <button id="push">Add</button>
+        </div>
+        <div id="tasks">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.querySelector('#push').onclick = function(){
+            if(document.querySelector('#newtask input').value.length==0){
+                alert("Please Enter a task");
+            }
+            else{
+                document.querySelector('#tasks').innerHTML += `
+                <div class="task">
+                    <span id="taskname">
+                        ${document.querySelector('#newtask input').value}
+                        </span>
+                        <button class="edit">
+                            <i class="fas fa-edit"></i>
+
+                            </button>
+                                
+                        <button class="delete">
+                            
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                                
+                                
+                                `;
+                                var current_tasks = document.querySelectorAll(".delete");
+                                for(var i=0; i<current_tasks.length; i++){
+                                    current_tasks[i].onclick = function(){
+                                        this.parentNode.remove();
+                                    }
+                                    var current_tasks = document.querySelectorAll(".edit");
+                                for(var i=0; i<current_tasks.length; i++){
+                                    
+                                    current_tasks[i].onclick = function(){
+                                        querySelector('#newtask input').value=push;
+                                    }
+                                    }
+                                }
+            }
+
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="newtask">
+            <input type="text" placeholder="Task to be done.......">
+            <button id="push">Add</button>
+        </div>
+        <div id="tasks">
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        document.querySelector('#push').onclick = function(){
+            if(document.querySelector('#newtask input').value.length == 0){
+                alert("Please Enter a task");
+            }
+            else{
+                document.querySelector('#tasks').innerHTML += `
+                <div class="task">
+                    <span id="taskname">
+                        ${document.querySelector('#newtask input').value}
+                    </span>
+                    <button class="edit">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="delete">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                </div>`;
+                
+                var current_tasks = document.querySelectorAll(".delete");
+                for(var i=0; i<current_tasks.length; i++){
+                    current_tasks[i].onclick = function(){
+                        this.parentNode.remove();
+                    }
+                }
+
+                var current_edit_buttons = document.querySelectorAll(".edit");
+                for(var i=0; i<current_edit_buttons.length; i++){
+                    current_edit_buttons[i].onclick = function(){
+                        var taskSpan = this.parentNode.querySelector("#taskname");
+                        var newTaskName = prompt("Edit task:", taskSpan.innerText);
+                        if (newTaskName !== null) {
+                            taskSpan.innerText = newTaskName;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
